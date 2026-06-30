@@ -25,8 +25,9 @@ const Log = async (stack, level, package, message) => {
         console.log("Error:", error.response ? error.response.data : error.message)
 
     }
+    next();
 
 
 
 }
-Log("backend", "info", "handler", "test log");
+module.exports = Log
